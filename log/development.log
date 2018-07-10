@@ -375,3 +375,798 @@ Processing by ArtistsController#show as HTML
   Parameters: {"id"=>"2"}
   Rendered artists/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 208.85.78.1 at 2018-07-06 17:43:41 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 17:43:46 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `artist' for nil:NilClass):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/artists_helper.rb:4:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb___3004628628014636795_41152900'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb___3004628628014636795_41152900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.3ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 17:44:11 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.6ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `artist' for nil:NilClass):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/artists_helper.rb:4:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb___3004628628014636795_41152900'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb___3004628628014636795_41152900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.5ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 17:45:28 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.5ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined method `artists' for nil:NilClass):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/artists_helper.rb:4:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb___3004628628014636795_41152900'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb___3004628628014636795_41152900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.5ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 17:45:46 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `artist' for #<Class:0x00000002590900>):
+  app/controllers/songs_controller.rb:4:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.4ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 17:46:05 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.5ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `artist' for nil:NilClass):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/artists_helper.rb:4:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb___3004628628014636795_41152900'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb___3004628628014636795_41152900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.7ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 17:46:26 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 15ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=):
+  app/controllers/songs_controller.rb:4:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.9ms)
+
+
+Started GET "/songs/new" for 208.85.78.1 at 2018-07-06 17:46:36 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#new as HTML
+  Rendered songs/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 183ms (Views: 177.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 208.85.78.1 at 2018-07-06 17:46:36 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/songs" for 208.85.78.1 at 2018-07-06 17:46:44 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0wH8+pwcdtFsKssXaAxcOZeG5LJXDmpDbEn/1KYzS1zdnoeyFwJenoYgXLXdO5xJvY5GK+ltbPu1AQ28o8ZmLA==", "song"=>{"title"=>"new song", "artist_name"=>"new artist"}, "commit"=>"Create Song"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "new song"], ["created_at", "2018-07-06 17:46:44.159275"], ["updated_at", "2018-07-06 17:46:44.159275"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.31.156:38321/songs/3
+Completed 302 Found in 9ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/songs/3" for 208.85.78.1 at 2018-07-06 17:46:44 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered songs/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs/3/edit" for 208.85.78.1 at 2018-07-06 17:46:54 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered songs/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 17:46:56 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=):
+  app/controllers/songs_controller.rb:4:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.2ms)
+
+
+Started GET "/" for 208.85.78.1 at 2018-07-06 18:51:36 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:51:41 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `artist' for nil:NilClass):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:4:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.3ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:55:11 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `artist' for #<Class:0x007fa66130dc48>):
+  app/controllers/songs_controller.rb:4:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.9ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:56:08 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `artist' for #<Class:0x007fa6619d8e38>):
+  app/controllers/songs_controller.rb:4:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.1ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:56:17 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `artist' for #<Class:0x007fa6619b6360>):
+  app/controllers/songs_controller.rb:4:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.6ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:56:52 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `artist' for #<Class:0x00000002216d60>):
+  app/controllers/songs_controller.rb:4:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.8ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:56:59 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `artist' for nil:NilClass):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:4:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.5ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:57:12 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `artist' for nil:NilClass):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:4:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.0ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:57:19 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined local variable or method `artist' for #<#<Class:0x00000005625390>:0x0000000560f720>
+Did you mean?  artist_url):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:4:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.0ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:57:27 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.6ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"songs", :id=>nil} missing required keys: [:id]):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:7:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.1ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:57:45 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.4ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"songs", :id=>nil} missing required keys: [:id]):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:7:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.3ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:58:01 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/jrobinparker/refactoring-views-with-helpers-lab-cb-000/app/helpers/songs_helper.rb:3: formal argument cannot be an instance variable
+ def display_artist(@song)
+                         ^):
+  app/helpers/songs_helper.rb:3: formal argument cannot be an instance variable
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/songs_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.5ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:58:10 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.5ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"songs", :id=>nil} missing required keys: [:id]):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:7:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.4ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:58:39 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.4ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"songs", :id=>nil} missing required keys: [:id]):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:7:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.6ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:58:48 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"songs"} missing required keys: [:id]):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:7:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.0ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:59:02 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"songs", :id=>nil} missing required keys: [:id]):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:7:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.1ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:59:39 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (25.5ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x007fa661f645f0>:0x007fa661f08520>
+Did you mean?  font_path):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:7:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.7ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 18:59:47 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.4ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 171ms (Views: 168.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 208.85.78.1 at 2018-07-06 18:59:47 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/songs/new" for 208.85.78.1 at 2018-07-06 19:00:02 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#new as HTML
+  Rendered songs/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 38ms (Views: 31.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/songs" for 208.85.78.1 at 2018-07-06 19:00:04 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iR0lC6u/n4ONu3ll0LDctp6vpZpmyL8ZL1cCeGfY+pWHgl5DIKG3zGex7sdlhxzGtKcHA9iruaH2H/AQYi3X5Q==", "song"=>{"title"=>"new song"}, "commit"=>"Create Song"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "new song"], ["created_at", "2018-07-06 19:00:04.999380"], ["updated_at", "2018-07-06 19:00:04.999380"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://165.227.31.156:38765/songs/4
+Completed 302 Found in 9ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/songs/4" for 208.85.78.1 at 2018-07-06 19:00:05 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered songs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs/4" for 208.85.78.1 at 2018-07-06 19:00:34 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSong Load (0.1ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered songs/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 19:00:36 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs/3" for 208.85.78.1 at 2018-07-06 19:00:38 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered songs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 19:00:40 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 19:00:41 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs/3" for 208.85.78.1 at 2018-07-06 19:01:33 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered songs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/songs/3/edit" for 208.85.78.1 at 2018-07-06 19:01:34 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered songs/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/songs/3" for 208.85.78.1 at 2018-07-06 19:01:39 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gUk3XG7+7lxNHJgxHDMeMbVxqEMsDQFXsJu+2EoPOEyP1kwU5eDGE6cWD5OpBN5Bn3kK2pJuB+9p00ywT/oVPA==", "song"=>{"title"=>"new song"}, "commit"=>"Update Song", "id"=>"3"}
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.31.156:38765/songs/3
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/songs/3" for 208.85.78.1 at 2018-07-06 19:01:39 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered songs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 19:01:40 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"songs", :id=>nil} missing required keys: [:id]):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:7:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_45440060'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_45440060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.4ms)
+
+
+Started GET "/songs/3/edit" for 208.85.78.1 at 2018-07-06 19:03:48 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered songs/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 16ms (Views: 8.1ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/songs/3" for 208.85.78.1 at 2018-07-06 19:03:51 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"51Afisrc/qPZBxTVn7k4upZnYWBtYoLCTkdH8LiRKj3pz2TCQcLW7DMNg3cqjvjKvG/D+dMBhHqXD7WYvWQHTQ==", "song"=>{"title"=>"new song"}, "commit"=>"Update Song", "id"=>"3"}
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.31.156:38765/songs/3
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/songs/3" for 208.85.78.1 at 2018-07-06 19:03:51 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSong Load (0.1ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered songs/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/songs" for 208.85.78.1 at 2018-07-06 19:03:52 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"songs", :id=>nil} missing required keys: [:id]):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %> - <%= display_artist(@song) %></li>
+    4: <% end %>
+    5: </ul>
+    6: <br>
+  app/helpers/songs_helper.rb:7:in `display_artist'
+  app/views/songs/index.html.erb:3:in `block in _app_views_songs_index_html_erb__326538280123699671_70176291645380'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__326538280123699671_70176291645380'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.1ms)
+
+
+Started GET "/songs/3/edit" for 208.85.78.1 at 2018-07-06 19:03:55 +0000
+Cannot render console from 208.85.78.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSong Load (0.1ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered songs/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateArtistSongs (20180710023117)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "artist_songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_id" integer, "song_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180710023117"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
